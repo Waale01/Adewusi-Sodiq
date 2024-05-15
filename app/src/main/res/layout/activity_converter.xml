@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/imageViewLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_register_hero"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Let help your greetings"
+        android:textSize="32sp"
+        android:textColor="@color/contentTextColor"
+        android:layout_below="@id/imageViewLogo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"/>
+
+    <!-- English Input -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardViewEnglish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_below="@id/textViewTitle"
+        app:cardBackgroundColor="@color/whiteTextColor"
+        app:cardCornerRadius="10dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputEnglish"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_english_greeting">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextEnglish"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Yoruba Output -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardViewYoruba"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cardViewEnglish"
+        android:layout_margin="16dp"
+        app:cardBackgroundColor="@color/whiteTextColor"
+        app:cardCornerRadius="10dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputYoruba"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Yoruba Greeting"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextYoruba"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:enabled="false"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Button for Conversion -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonConvert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cardViewYoruba"
+        android:layout_centerHorizontal="true"
+        android:text="Convert"/>
+
+</RelativeLayout>

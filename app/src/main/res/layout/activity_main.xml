@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+  <!--  android:background="@color/material_dynamic_neutral_variant90">  -->
+    <TextView
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        style="@style/viewParent.headerText.NoMode"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="Welcome\nto English to \nYoruba \ngreeting! \n "/>
+
+    <!-- App Logo -->
+    <ImageView
+        android:id="@+id/image_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"/>
+    <!--    android:src="@drawable/ic_register_hero" /> -->
+    <!-- Text Animation -->
+    <TextView
+        android:id="@+id/text_greeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/greetings_converter"
+        android:textSize="24sp"
+        android:textColor="#2196F3"
+        android:layout_below="@id/image_logo"
+        android:layout_centerHorizontal="true"
+        android:alpha="1" /> <!-- Initial visibility: invisible -->
+
+    <!-- Loading Indicator (Optional) -->
+    <Button
+        android:id="@+id/btn_proceed"
+        android:layout_marginTop="300dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_greeting"
+        android:layout_centerHorizontal="true"
+        android:text="Click to Proceed"
+        android:visibility="visible" />
+
+     <!-- Initial visibility: hidden -->
+
+</RelativeLayout>
